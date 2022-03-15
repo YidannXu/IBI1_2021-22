@@ -4,7 +4,7 @@ d=0
 for i in range(1,11,1):
     d=d+i
     print (d) 
-running result:
+#running result:
 1
 3
 6
