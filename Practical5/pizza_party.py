@@ -18,4 +18,4 @@ for n in range(1,25):
 #if the pieces reach 64, everyone can eat a pieces of pizza,so loop breaks.     
       if p>=64:
            break
-     
+#after running the code, we find that 11 cuts result in 67 pieces.
