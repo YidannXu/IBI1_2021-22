@@ -15,7 +15,7 @@ for n in range(1,25):
            print(w1+str(n)+w2+str(p)+w3)
 #continue the loop          
            n=n+1
-#if the pieces reach 64, everyone can eat a pieces of pizza,so loop breaks.     
+#if the pieces reach 64, everyone can eat a piece of pizza,so loop breaks.     
       if p>=64:
            break
 #after running the code, we find that 11 cuts result in 67 pieces.
