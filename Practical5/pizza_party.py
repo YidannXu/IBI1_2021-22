@@ -11,7 +11,7 @@ for n in range(1,25):
       if n>=1:
 #get the pieces value according to n
            p=((n**2)+n+2)/(2)
-#get the oucome in sentenses
+#get the outcome in sentenses
            print(w1+str(n)+w2+str(p)+w3)
 #continue the loop          
            n=n+1
