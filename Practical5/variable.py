@@ -17,8 +17,8 @@ else:
       # The rate of new cases is greater in 2021.
 
 #create two strings
-X="enjoy"
-Y=" everyday"
+X="true"
+Y="false"
 #combine them
 W=X + Y
 print(W)
