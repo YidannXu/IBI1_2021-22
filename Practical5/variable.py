@@ -16,7 +16,9 @@ else:
 #answer:e is greater than d
       # The rate of new cases is greater in 2021.
 
-X="x"
-Y="y"
-W=X and Y
+#create two strings
+X="enjoy"
+Y=" everyday"
+#combine them
+W=X + Y
 print(W)
