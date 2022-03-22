@@ -14,7 +14,7 @@ if M<60:
     print('It is lower than the pass mark of 60%')
 else:
     print('It is higher than the pass mark of 60%')
-
+#So Rob has failed this ICA.
 #To create a boxplot and I had help from instructor Robert Young in IBI1 lecture6.1 to set the specific  content of the graph.
 import numpy as np 
 import matplotlib.pyplot as plt
