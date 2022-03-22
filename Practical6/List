@@ -1,0 +1,19 @@
+marks=[45,36,86,57,53,92,65,45]
+Mark = sorted(marks)
+print(Mark)
+
+import numpy as np
+word='average mark:'
+M=np.mean(marks)
+print(word, str(M))
+if M<60:
+    print('It is lower than the pass mark of 60%')
+else:
+    print('It is higher than the pass mark of 60%')
+
+import numpy as np 
+import matplotlib.pyplot as plt
+plt.boxplot(marks,sym='o',whis=1.5,patch_artist=True)
+plt.title("Distribution of the marks")
+              
+plt.show()
