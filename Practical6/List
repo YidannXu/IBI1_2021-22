@@ -1,16 +1,21 @@
+#Sort the eight numbers and print to the screen
 marks=[45,36,86,57,53,92,65,45]
 Mark = sorted(marks)
 print(Mark)
 
+#Calculate the average value and this code was obtained from https://blog.csdn.net/article/details on  
+22/3/22 
 import numpy as np
 word='average mark:'
 M=np.mean(marks)
 print(word, str(M))
+#compare this average value to 60 and print the result to the screen
 if M<60:
     print('It is lower than the pass mark of 60%')
 else:
     print('It is higher than the pass mark of 60%')
 
+#To create a boxplot and I had help from instructor Robert Young in IBI1 lecture6.1 to set the specific  content of the graph.
 import numpy as np 
 import matplotlib.pyplot as plt
 plt.boxplot(marks,sym='o',whis=1.5,patch_artist=True)
