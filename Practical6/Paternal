@@ -21,4 +21,6 @@ N = 10
 x = Paternal_age
 y = chd
 plt.scatter(x, y, marker='o')
+plt.xlabel("Paternal age")
+plt.ylabel("congenital heart disease")
 plt.show()
