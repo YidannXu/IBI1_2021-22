@@ -1,3 +1,3 @@
 Question : When the new cases and total cases were significantly increasing in Spain?
-Line number: 
+Line number: 48-61
 Result: As is shown in the plot, the total cases increased sharply after 3/8/2020 and the new cases increased moderately after 12/3/2020.
