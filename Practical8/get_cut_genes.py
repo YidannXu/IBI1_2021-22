@@ -1,21 +1,24 @@
 import re
+#read the origin fasta file
 import os
 os.chdir("/Users/macbook/IBI1_2021-22/Practical8")
-all_genes = open ("Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa")
+file = open ("Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa")
+#the result is to create a new file cut_genes.fa 
 result = open("cut_genes.fa","w")
-seq = all_genes.read()
-seq = " ".join(seq.split("/n"))
-seq = seq.lstrip(">")
-genes = re.split(r">",seq)
+DNA = file.read()
+DNA = "".join(DNA.split("\n"))
+DNA = DNA.lstrip(">")
+genes = re.split(r">",DNA)
 output = " "
+#output the name, length and genes that contain the specific squences
 for i in range (len(genes)):
     if re.search(r"GAATTC",genes[i]):
-        name = str(re.findall(r"genes:(.+?)\s",genes[i]))
+        name = str(re.findall(r"gene:(.+?)\s",genes[i]))
+        name = name.strip("['']")
         a = str(re.findall(r"](.+)",genes[i]))
-        a = a.strip("[" "]")
-        length = len(a)
-        output = output+">"+name+"length"+"\n"+a+"\n"
-output = output[:-1]               
+        a = a.strip("['']")
+        b = len(a)
+        output = output+">"+name+"        "+str(b)+"\n"+a+"\n"
 result.write(output)
-all_genes.close()
+file.close()
 result.close()
