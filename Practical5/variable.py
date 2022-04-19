@@ -20,5 +20,15 @@ else:
 X="true"
 Y="false"
 #combine them
-W=X + Y
+W=X and Y
 print(W)
+#change the Boolean variable X,Y
+X="true"
+Y="true"
+Z=X and Y
+print(Z)
+
+X="false"
+Y="false"
+M=X and Y
+print(M)
