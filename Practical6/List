@@ -18,7 +18,7 @@ else:
 #To create a boxplot and I had help from instructor Robert Young in IBI1 lecture6.1 to set the specific  content of the graph.
 import numpy as np 
 import matplotlib.pyplot as plt
-plt.boxplot(marks,sym='o',whis=1.5,patch_artist=True)
+plt.boxplot(marks,vert=True,sym='o',whis=1.5,patch_artist=True)
 plt.title("Distribution of the marks")
-              
+plt.ylabel("scores")
 plt.show()
