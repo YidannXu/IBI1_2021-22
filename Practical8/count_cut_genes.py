@@ -1,6 +1,7 @@
 
 import re
-#allow the users to input a filename as the new fasta file
+#allow the users to input a filename as the new fasta file.
+#Please note that this can only be done in python3 version
 new_fasta_file = input("input a new filename:")
 file = open('Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa')
 result = open(new_fasta_file,"w")
