@@ -11,7 +11,7 @@ total_list =[]
 translation_list = []
 number_of_terms = 0
 
-#calculate the overall terms using "for" statement. And calculate the overall childnodes by listing "is_a" elements.
+#calculate the overall terms using for-loop. And calculate the overall childnodes by listing "is_a" elements.
 for term in terms:
     number_of_terms+=1
     childnodes = term.getElementsByTagName("is_a")
