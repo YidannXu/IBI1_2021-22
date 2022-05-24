@@ -73,6 +73,6 @@ if total_average>translation_average:
     print(x)
 if total_average<translation_average:
     print(y)
-#The translation terms contain, on average, a great number of childnodes than the overall Gene Oncology.
+#The translation terms contain, on average, a greater number of childnodes than the overall Gene Oncology.
 #It may take some time to run due to the huge data.
 
