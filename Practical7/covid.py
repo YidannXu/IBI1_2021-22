@@ -1,3 +1,7 @@
+import os
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
 #import the .csv file
 os.chdir("/home/chengzijiang/macbook/IBI1_2021-22/Practical7")
 covid_data=pd.read_csv("full_data.csv")
