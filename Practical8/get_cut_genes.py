@@ -1,7 +1,7 @@
 import re
 #read the origin fasta file
 import os
-os.chdir("/Users/macbook/IBI1_2021-22/Practical8")
+os.chdir("/Users/macbook/IBI1_2021-22/Practical8") #markers can change the path here
 file = open ("Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa")
 #the result is to create a new file cut_genes.fa 
 result = open("cut_genes.fa","w")
