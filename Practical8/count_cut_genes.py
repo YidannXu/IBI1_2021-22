@@ -1,4 +1,3 @@
-
 import re
 #allow the users to input a filename as the new fasta file.
 #Please note that this can only be done in python3 version
