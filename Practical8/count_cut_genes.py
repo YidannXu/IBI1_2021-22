@@ -2,7 +2,7 @@ import re
 #allow the users to input a filename as the new fasta file.
 #Please note that this can only be done in python3 version
 new_fasta_file = input("input a new filename:")
-file = open('Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa')
+file = open('/Users/macbook/Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa') #markers can change the path here
 result = open(new_fasta_file,"w")
 DNA = file.read()
 DNA = "".join(DNA.split("\n"))
@@ -21,4 +21,5 @@ for i in range(len(genes)):
 result.write(output)
 file.close()
 result.close()
+#Through this codes, I have created an fasta file whose name is "new filename named by users.fa" in practical8.
 
