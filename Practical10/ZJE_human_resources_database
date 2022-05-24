@@ -4,8 +4,9 @@ class Coordinate (object):
         self.y = location
         self.z = role
     def Coordinate (self):
-        info = "full name:"+self.x+"   location:"+self.y+"   role:"+self.z
+        info = "full name: "+self.x+"   location: "+self.y+"   role: "+self.z
         print(info)
         return info
+# Here is an example
 Z = Coordinate("John Wilson","International_Campus","Professor")
 Z.Coordinate()
