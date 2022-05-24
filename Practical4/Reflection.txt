@@ -1,1 +1,3 @@
-I am confused about replacing index.md, committing and pushing the changes to GitHub.
+I am confused about replacing index.md, committing and pushing the changes to GitHub when doing practicals.
+During this course, I have learnt version control, how to navigate Unix-like systems and how to write simple programs in Python.
+Also, I have improved my ability to ask questions properly.
