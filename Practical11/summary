@@ -1,15 +1,19 @@
-#The percentage of identical amino acid and the alignment score(BLOSUM score) for each comparison.
+The percentage of identical amino acid and the alignment score(BLOSUM score) for each comparison:
 human-mouse:
-percentage of identical amino acid:0.97
-BLOSUM score:1490
+percentage of identical amino acid:96.54%
+alignment score:1490
 
 human-random:
-percentage of identical amino acid:0.03
-BLOSUM score:-351
+percentage of identical amino acid:2.77%
+alignment score:-351
 
 mouse-random:
-percentage of identical amino acid:0.03
-BLOSUM score:-348
+percentage of identical amino acid:3.11%
+alignment score:-348
 
-#My biological and evolutionary interpretation made from these data.
-From the results above, I find that the percentage of identical amino acids is much higher in the human-mouse comparison, which indicates that human and mouse have the same ancestor and DLX5 gene is highly conserved in evolution.
+My biological and evolutionary interpretation made from these data：
+Larger percentage and alignment score indicate greater similarity between two DNA sequences.
+From the results above, I find that the percentage of identical amino acids and alignment score are much higher in the human-mouse comparison.
+It indicates that DLX5 gene may play an important role in human and mouse.
+Additionally, human and mouse may have the same ancestor and DLX5 gene may be highly conserved in evolution.
+
