@@ -15,3 +15,10 @@ def calculator(x,y):
 X = input("Your total money is ")
 Y = input("The price of one chocolate bar is ")
 Z = calculator(X,Y)
+
+## Here is an example function call
+print('If the total money is 30 and the prize of one chocolate bar is 7')
+calculator(30,7)
+# The function will produce a output showing that:
+# You can buy 4 bars.
+# There are 2 left.
