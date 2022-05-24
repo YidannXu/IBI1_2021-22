@@ -3,33 +3,52 @@ import xml.dom.minidom
 import numpy as np
 import re
 import matplotlib.pyplot as plt
-DOMTree = xml.dom.minidom.parse("go_obo.xml")
+DOMTree = xml.dom.minidom.parse("/Users/macbook/go_obo.xml")#marker can change the path here
 collection = DOMTree.documentElement
 terms = collection.getElementsByTagName("term")
 
+#define a dictionary whose keys are parentnodes and values are childnodes
+dic = {}
 total_list =[]
 translation_list = []
 number_of_terms = 0
 
-#calculate the overall terms using for-loop. And calculate the overall childnodes by listing "is_a" elements.
+#calculate the total number of terms using for-loop and report the outcome
 for term in terms:
     number_of_terms+=1
-    childnodes = term.getElementsByTagName("is_a")
-    number_of_childnodes = len(childnodes)
-    total_list.append(number_of_childnodes)
-
-#report the total number of terms
 a = "the total number of terms currently recorded in the Gene Ontology is: "
 print(a+str(number_of_terms))
 
-#calculate the overall terms related to translation by listing "defstr" elements. And calculate the overall childnodes related to translation by listing "is_a" elements. 
+# define a function to calculate the total number of childnodes. 
+def counter(list):
+	for i in list:
+		if i not in list_:
+			list_.append(i)
+			if i in dic:
+				counter(dic[i])
+	return len(list_)
+
 for term in terms:
-    defstr = term.getElementsByTagName("defstr")[0]
-    defstr_text = str(defstr.childNodes[0].data)
-    if re.findall("translation",defstr_text):
-        childnodes_translation = term.getElementsByTagName("is_a")
-        number_of_childnodes_translation = len(childnodes_translation)
-        translation_list.append(number_of_childnodes_translation)
+	is_a_list=[]
+	for i in term.getElementsByTagName("is_a"):
+		is_a_list.append(i.childNodes[0].data)
+	id_all= term.getElementsByTagName("id")[0].childNodes[0].data
+	for is_a in is_a_list:
+		if is_a in dic:
+			dic[is_a].append(id_all)
+		else:
+			dic[is_a]=[id_all]
+
+for term in terms:
+	childnodes_number=0
+	list_=[]
+	id_all=term.getElementsByTagName('id')[0].childNodes[0].data
+	if id_all in dic:
+		childnodes_number=counter(dic[id_all])
+	total_list.append(childnodes_number)
+	if 'translation' in term.getElementsByTagName("defstr")[0].childNodes[0].data:
+		translation_list.append(childnodes_number)
+
 
 #print a boxplot describing the distribution of childnodes
 plt.boxplot(total_list,labels = ["Gene Ontology"])
@@ -55,3 +74,4 @@ if total_average>translation_average:
 if total_average<translation_average:
     print(y)
 #The translation terms contain, on average, a great number of childnodes than the overall Gene Oncology.
+
